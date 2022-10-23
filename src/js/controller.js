@@ -24,12 +24,11 @@ const controlRecipes = async function () {
     // 2. Render recipe
     recipeView.render(model.state.recipe);
   } catch (err) {
-    console.log(err);
+    recipeView.renderError();
   }
 };
 
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
 };
-
 init();
